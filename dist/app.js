@@ -20,7 +20,8 @@ fastify.register(require("./routes/fastifyRoutes"));
 const port = process.env.PORT || 3000;
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield fastify.listen(port);
+        // @ts-ignore
+        fastify.listen(process.env.PORT, process.env.HOST || "0.0.0.0");
     }
     catch (err) {
         fastify.log.error(err);
