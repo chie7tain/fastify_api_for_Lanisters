@@ -14,7 +14,7 @@ const start = async () => {
   try {
     fastify.listen(
       process.env.PORT || 3000,
-      process.env.HOST || "::",
+      process.env.HOST || "localhost",
       (err: any) => {
         if (err) throw err;
         console.log(`server listening on ${fastify.server.address().port}`);

@@ -21,7 +21,7 @@ fastify.register(require("./routes/fastifyRoutes"));
 const port = process.env.PORT || 3000;
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        fastify.listen(process.env.PORT || 3000, process.env.HOST || "::", (err) => {
+        fastify.listen(process.env.PORT || 3000, process.env.HOST || "localhost", (err) => {
             if (err)
                 throw err;
             console.log(`server listening on ${fastify.server.address().port}`);
