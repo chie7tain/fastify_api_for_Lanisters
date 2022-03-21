@@ -1,6 +1,9 @@
-import Fastify from "fastify";
+const fastify = require("fastify")({
+  logger: true,
+});
+
 import fastifyCors from "fastify-cors";
-const fastify = Fastify({ logger: true });
+
 fastify.register(fastifyCors);
 
 fastify.register(require("./routes/fastifyRoutes"));
@@ -9,8 +12,14 @@ const port = process.env.PORT || 3000;
 
 const start = async () => {
   try {
-    // @ts-ignore
-    fastify.listen(process.env.PORT, process.env.HOST || "0.0.0.0");
+    fastify.listen(
+      process.env.PORT || 3000,
+      process.env.HOST || "::",
+      (err: any) => {
+        if (err) throw err;
+        console.log(`server listening on ${fastify.server.address().port}`);
+      }
+    );
   } catch (err) {
     fastify.log.error(err);
     process.exit(1);

@@ -12,16 +12,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const fastify_1 = __importDefault(require("fastify"));
+const fastify = require("fastify")({
+    logger: true,
+});
 const fastify_cors_1 = __importDefault(require("fastify-cors"));
-const fastify = (0, fastify_1.default)({ logger: true });
 fastify.register(fastify_cors_1.default);
 fastify.register(require("./routes/fastifyRoutes"));
 const port = process.env.PORT || 3000;
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        // @ts-ignore
-        fastify.listen(process.env.PORT, process.env.HOST || "0.0.0.0");
+        fastify.listen(process.env.PORT || 3000, process.env.HOST || "::", (err) => {
+            if (err)
+                throw err;
+            console.log(`server listening on ${fastify.server.address().port}`);
+        });
     }
     catch (err) {
         fastify.log.error(err);
