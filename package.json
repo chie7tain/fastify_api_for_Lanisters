@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "api for computing fees for payment transactions ",
   "main": "server.js",
-  "repository": "https://github.com/chie7tain/api_for_Lanisters.git",
+  "repository": "https://github.com/chie7tain/fastify_api_for_Lanisters.git",
   "author": "chei7tain <fredrickokwuobi@gmail.com>",
   "license": "MIT",
   "private": null,
