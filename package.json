@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": null,
   "scripts": {
-    "start": "node app.js",
+    "start": "node dist/app.js",
     "dev": "nodemon dist/app.js",
     "fast": "nodemon dist/app.js",
     "compile": "tsc --watch"
