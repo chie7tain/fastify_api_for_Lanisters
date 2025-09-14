@@ -14,7 +14,6 @@ export const createFeeSpec = async (
   req: { body: { FeeConfigurationSpec: string } },
   reply: any
 ) => {
-  console.log(req.body);
   try {
     let { FeeConfigurationSpec } = req.body;
     let fees = FeeConfigurationSpec.split("\n");
