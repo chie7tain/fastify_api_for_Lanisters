@@ -3,8 +3,8 @@
     "feeId": "LNPY1221",
     "feeCurrency": "NGN",
     "feeLocale": "*",
-    "feeEntity": "*",
-    "feeEntityProperty": "*",
+    "feeEntity": "_",
+    "feeEntityProperty": "_",
     "feeType": "PERC",
     "feeValue": "1.4"
   },
@@ -22,23 +22,23 @@
     "feeCurrency": "NGN",
     "feeLocale": "LOCL",
     "feeEntity": "CREDIT-CARD",
-    "feeEntityProperty": "*",
+    "feeEntityProperty": "_",
     "feeType": "FLAT_PERC",
     "feeValue": "50:1.4"
   },
   {
     "feeId": "LNPY1224",
     "feeCurrency": "NGN",
-    "feeLocale": "*",
+    "feeLocale": "_",
     "feeEntity": "BANK-ACCOUNT",
-    "feeEntityProperty": "*",
+    "feeEntityProperty": "_",
     "feeType": "FLAT",
     "feeValue": "100"
   },
   {
     "feeId": "LNPY1225",
     "feeCurrency": "NGN",
-    "feeLocale": "*",
+    "feeLocale": "_",
     "feeEntity": "USSD",
     "feeEntityProperty": "MTN",
     "feeType": "PERC",
